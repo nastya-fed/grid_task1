@@ -37,7 +37,7 @@
    docker-compose up
    ```
 
-6. **Login to the UI Adminer**  
+6. **Go to localhost and login to the UI Adminer**  
 7. **Using an SQL query, check that the data has been saved**
     ![CheckTable](pictures/CheckTable.jpg)
 
