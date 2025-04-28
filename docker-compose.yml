@@ -7,16 +7,16 @@ services:
       POSTGRES_PASSWORD: pass
       POSTGRES_DB: mydb
     volumes:
-      - db_storage:/var/lib/postgresql/data  # Чтобы данные не исчезали
+      - db_storage:/var/lib/postgresql/data
     ports:
-      - "5432:5432"  # Открываем порт для подключения к базе данных
+      - "5432:5432"
 
   adminer:
-    image: adminer  # Веб-интерфейс для работы с PostgreSQL
+    image: adminer  
     ports:
-      - "8080:8080"  # Порт для доступа к Adminer
+      - "8080:8080" 
     depends_on:
-      - db  # Adminer зависит от базы данных
+      - db  
 
 volumes:
-  db_storage:  # Объем для хранения данных PostgreSQL
+  db_storage: 
