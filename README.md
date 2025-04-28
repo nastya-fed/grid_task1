@@ -22,7 +22,7 @@
    [http://localhost:8080](http://localhost:8080)
 
 5. **Login to the UI Adminer:** 
-    Enter the user name, password, and database name in the file .yml. In this case, it's user, pass, mydb.
+    Enter the user name, password, and database name in the file .yml. In this case, it's user, pass, mydb. System is PostgreSQL.
 
 6. **Create a new table and add a row to it**
     ![CreateTable](pictures/CreateTable.jpg)
