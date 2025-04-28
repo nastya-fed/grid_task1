@@ -1,0 +1,22 @@
+version: '3'
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: mydb
+    volumes:
+      - db_storage:/var/lib/postgresql/data  # Чтобы данные не исчезали
+    ports:
+      - "5432:5432"  # Открываем порт для подключения к базе данных
+
+  adminer:
+    image: adminer  # Веб-интерфейс для работы с PostgreSQL
+    ports:
+      - "8080:8080"  # Порт для доступа к Adminer
+    depends_on:
+      - db  # Adminer зависит от базы данных
+
+volumes:
+  db_storage:  # Объем для хранения данных PostgreSQL
